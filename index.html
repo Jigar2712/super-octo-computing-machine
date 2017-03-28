@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>My Resume</title>
+	
+	<meta charset="UTF-8">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="avicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="theme-color" content="#ffffff">
+	<script src="jquery-3.1.1.js"></script>
+	
+	<style>
+		body{
+			background-color:black;
+		}
+		div.two{
+			border:1px solid black; 
+			width:80px; 
+			height:33px; 
+			background-color:#4CAF50;
+			margin-top:20px;
+			margin-left:1770px;
+			text-align:center;
+			padding-top:13px;
+			font-size:20px;
+			color:white;
+		}
+		div.three{
+			border:1px solid black; 
+			width:80px; 
+			height:33px; 
+			background-color:#4CAF50;
+			margin-left:1770px;
+			text-align:center;
+			padding-top:13px;
+			font-size:20px;
+			color:white;
+		}
+		.button {
+			background-color: #4CAF50;
+			border: none; 
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 15px;
+			cursor: pointer;
+		}
+		h1{
+			margin:300px;
+			color:white; 
+			font-size: 50px;
+			text-align: center;
+		}
+		.sidenav {
+			height: 900px;
+			width: 0;
+			position: fixed;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			background-color: #111;
+			overflow-x: hidden;
+			transition: 0.5s;
+			padding-top: 60px;
+		}
+		.sidenav a {
+			padding: 8px 8px 8px 32px;
+			text-decoration: none;
+			font-size: 25px;
+			color: #818181;
+			display: block;
+			transition: 0.3s
+		}
+		.sidenav a:hover, .offcanvas a:focus{
+			color: #f1f1f1;
+		}
+		.sidenav .closebtn {
+			position: absolute;
+			top: 0;
+			right: 25px;
+			font-size: 36px;
+			margin-left: 50px;
+		}
+
+		#main {
+			transition: margin-left .5s;
+			padding: 16px;
+		}
+		@media screen and (max-height: 450px) {
+			.sidenav {padding-top: 15px;}
+			.sidenav a {font-size: 18px;}
+		}
+		.box{
+			background-color: green;
+			height:200px;
+			width:400px;
+			position: absolute;
+			left:35%;
+			top:30%;
+			display:none;
+			text-align: center;
+			border: 2px solid black;
+		}
+		.close{
+			float:right;
+		}
+		#draggable {
+			width: 100px;
+			height: 100px;
+			background: #ccc;
+			padding-left: 20px;
+			left: 25px;
+			top: 30px;
+		}
+		#droppable {
+			position: absolute;
+			left: 250px;
+			top: 40px;
+			width: 125px;
+			height: 125px;
+			background: #999;
+			color: red;
+			padding: 10px;
+		}
+	</style>
+
+	<script src="jquery-1.12.4.js"></script>
+	<script src="jquery-ui.js"></script>
+	<link rel="stylesheet" href="jquery-ui.css">	
+
+</head>
+
+<script src="../js/jquery.js"></script>
+<script>
+	$(document).ready(
+		function(){
+			$(".pop1").on('click', function(){
+				$(".box").slideDown("slow");
+			});
+
+			$(".close").on('click', function(){
+				$(".box").slideUp("slow");
+		});
+	});
+	
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-96194933-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<body>
+
+	<div  style = "border: 1px solid black; width:100%; height:935px; background-image: url(6B.jpg); ">
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a class="about" href="#">About</a>
+			<a class ="contact" href="#">Contact Info</a>
+			<a class ="form" href="form.html">Message me</a>
+			<a class="pop1" href="#">Download Resume</a>
+			<a href="https://www.linkedin.com/in/jigar-parmar-b99a2257?trk=nav_responsive_tab_profile_pic"><img src="li.png" alt="LinkedIn" style="width:15%; margin-top:640px"></a>
+		</div>
+			<div id="main">
+				<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+			</div>
+	<script>
+			function openNav() {
+			document.getElementById("mySidenav").style.width = "250px";
+			document.getElementById("main").style.marginLeft = "250px";
+			
+		}
+
+			function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+			document.getElementById("main").style.marginLeft= "0";
+		}
+	</script>
+ 
+ <script>
+ $(document).ready(function(){
+    $(".contact").click(function(){
+        window.location.href = 'contact.html';
+    });
+});
+ 
+ </script>
+ 
+ <script>
+ $(document).ready(function(){
+    $(".about").click(function(){
+        window.location.href = 'about.html';
+    });
+}); 
+ </script>
+	
+		<h1><font color = "white">
+		Jigar Parmar
+		<br>
+		Creative, Self Motivated Data analyst.</font>
+		</h1>
+
+		<footer style = "margin-left: 850px; margin-top:100px">Copyright @ Jigar Parmar</footer>
+	</div>
+	<div class="box">
+	<img class="close" src="close.png" width="30"/>
+	<div>
+		<p>Perform Captcha</p>
+		<div id="droppable">Drop here</div>
+		<div id="draggable">Drag me</div>
+		<script>
+$( "#draggable" ).draggable();
+$( "#droppable" ).droppable({
+  drop: function() {   
+  	//window.location.=url;
+    // window.open(url, 'download'); 
+    window.location.href = 'JigarParmarResume.pdf';
+    }
+});
+</script>
+	</div>
+</body>
+
+</html>
